@@ -7,22 +7,13 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 import javax.swing.JOptionPane;
 
-public class MetodosConexion{
+public class MetodosConexion{ 
     
-    //Variables
-    public int contRegistros = 0;
-    int ubicacioRegistros = 0;
-    int buscador = 0;
-    boolean enter = false;
-    boolean idEncontrado = false;
-    int NoColumnas;
-    int NoFilas;    
-    
-    //Conexion
+    //Variables Conexion
     static Connection cn;
     static Statement st;
     static ResultSet rs;
- 
+    
     public void conectar()
 {
     try
@@ -31,11 +22,25 @@ public class MetodosConexion{
         cn = DriverManager.getConnection(url,"admin","wonder");
         st = cn.createStatement();
     }
-    catch(Exception e)
+    catch(SQLException e)
     {
         JOptionPane.showMessageDialog(null, "Conexion no realizada\n" + e);
     }
 }
+    
+    public void actualizar()
+    {
+        try {
+        conectar();
+        
+        String result = "Commit";
+        st.execute(result);
+        cn.close();    
+        } catch (SQLException e) {
+            
+        }
+        
+    }
     
     //Metodo para validar la fecha
     public static boolean isFechaValida(String fecha) {
