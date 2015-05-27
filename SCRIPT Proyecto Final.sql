@@ -78,18 +78,5 @@ CREATE TABLE Cuentas_Debito
 				FOREIGN KEY (Id_cuenta) REFERENCES Cuentas (Id_cuenta)
 );
 
-CREATE SEQUENCE seq_emp_id
-START WITH 1
-INCREMENT BY 1
-NOMAXVALUE;
 
-CREATE OR REPLACE TRIGGER trig_rmp_id
-BEFORE INSERT ON empleados
-FOR EACH ROW
-	BEGIN
-  		SELECT seq_emp_id.nextval INTO :new.id_empleado from Dual;
-	END
-;
-
-INSERT INTO EMPLEADOS VALUES(1,'root','root','root',to_date('01/01/00'),'1','root','root','root');
 

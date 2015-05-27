@@ -1,0 +1,1 @@
+INSERT INTO EMPLEADOS VALUES(1,'root','root','root',to_date('01/01/00'),'1','root','root','root');
