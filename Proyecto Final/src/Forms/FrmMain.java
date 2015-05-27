@@ -20,14 +20,17 @@ public class FrmMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        buttonAction1 = new org.edisoncor.gui.button.ButtonAction();
+        agregardEmpleadocmd = new org.edisoncor.gui.button.ButtonAction();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jButton1.setText("Agregar Empleado");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonAction1.setText("buttonAction1");
+
+        agregardEmpleadocmd.setText("Agregar Empleado");
+        agregardEmpleadocmd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                agregardEmpleadocmdActionPerformed(evt);
             }
         });
 
@@ -36,24 +39,28 @@ public class FrmMain extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addComponent(jButton1)
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(agregardEmpleadocmd, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addComponent(buttonAction1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(jButton1)
-                .addContainerGap(206, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addComponent(buttonAction1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(agregardEmpleadocmd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        frmEmpleado.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void agregardEmpleadocmdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregardEmpleadocmdActionPerformed
+     frmEmpleado.setVisible(true);
+    }//GEN-LAST:event_agregardEmpleadocmdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -91,6 +98,7 @@ public class FrmMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private org.edisoncor.gui.button.ButtonAction agregardEmpleadocmd;
+    private org.edisoncor.gui.button.ButtonAction buttonAction1;
     // End of variables declaration//GEN-END:variables
 }

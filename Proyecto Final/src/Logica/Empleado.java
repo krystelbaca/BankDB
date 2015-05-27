@@ -2,6 +2,7 @@ package Logica;
 
 import static Logica.MetodosConexion.rs;
 import static Logica.MetodosConexion.st;
+import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -29,12 +30,22 @@ public class Empleado extends Persona{
     {
         usuario = Usuario;
         contrasenia = Contrasenia;
+        Connection conexion;
         try {
-            metodos.conectar();
-            String result = "SELECT * FROM EMPLEADOS WHERE usuario = '" + usuario + "' AND contrasenia = '" + contrasenia + "'";
+            System.out.println("LALALA");
+            conexion = metodos.conectar();
+            st = conexion.createStatement();
+            System.out.println("asdasdasd");
+            String result = "SELECT * FROM EMPLEADOS WHERE USUARIO like '" + usuario + "' AND CONTRASENA like '" + contrasenia + "'";
+            System.out.println("puto");
+            
             rs = st.executeQuery(result);
-            if(rs.next() == true){
+            System.out.println("Hola");
+            
+            System.out.println(rs.toString());
+            if(rs.next()==true){
                 return true;
+                
             }
             else
             {

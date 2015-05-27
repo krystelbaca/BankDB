@@ -14,18 +14,19 @@ public class MetodosConexion{
     static Statement st;
     static ResultSet rs;
     
-    public void conectar()
+    public Connection conectar()
 {
     try
     {
         String url = "jdbc:oracle:thin:@localhost:1521:XE";
-        cn = DriverManager.getConnection(url,"admin","wonder");
-        st = cn.createStatement();
+        cn = DriverManager.getConnection(url,"banco","abcd123");
+        
     }
     catch(SQLException e)
     {
         JOptionPane.showMessageDialog(null, "Conexion no realizada\n" + e);
     }
+    return cn;
 }
     
     public void actualizar()
