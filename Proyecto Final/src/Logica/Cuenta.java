@@ -1,6 +1,6 @@
 package Logica;
 
-import static Logica.MetodosConexion.st;
+import static Logica.MetodosSQL.st;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,7 +12,7 @@ public class Cuenta {
     public Cuenta() {
     
     }
-        MetodosConexion metodos = new MetodosConexion();
+        MetodosSQL metodos = new MetodosSQL();
         
         int contRegistros = 0;
         int id_cuenta;

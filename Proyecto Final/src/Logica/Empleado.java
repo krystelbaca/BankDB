@@ -1,7 +1,8 @@
 package Logica;
 
-import static Logica.MetodosConexion.rs;
-import static Logica.MetodosConexion.st;
+import static Logica.MetodosSQL.cn;
+import static Logica.MetodosSQL.rs;
+import static Logica.MetodosSQL.st;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -15,7 +16,7 @@ public class Empleado extends Persona{
     
     }
     
-    MetodosConexion metodos = new MetodosConexion();
+    MetodosSQL metodos = new MetodosSQL();
     
     String contrasenia;
     String puesto;
@@ -33,6 +34,7 @@ public class Empleado extends Persona{
             metodos.conectar();
             String result = "SELECT * FROM EMPLEADOS WHERE usuario = '" + usuario + "' AND contrasenia = '" + contrasenia + "'";
             rs = st.executeQuery(result);
+            cn.close();
             if(rs.next() == true){
                 return true;
             }
@@ -42,38 +44,6 @@ public class Empleado extends Persona{
             }
         } catch (SQLException e) {
             return false;
-        }
-    }        
-    
-    public void altaEmpleados(String Nombre, String Apellidos,
-            String Direccion, String FechaNacimiento, String NumeroTelefono,
-            String Puesto, String Contrasenia, String Usuario)
-    {
-            nombre = Nombre;
-            apellidos = Apellidos;
-            direccion = Direccion;
-            fechaNacimiento = FechaNacimiento;
-            numeroTelefono = NumeroTelefono;
-            contrasenia = Contrasenia;
-            usuario = Usuario;
-            puesto = Puesto;
-        
-        try
-        {
-        metodos.conectar();
-        
-        String result = "INSERT INTO EMPLEADOS VALUES('','" + nombre + "', '" + //Resul es la concatenacion de valores para hacer una consulta a la base de datos.
-                apellidos + "', '" + direccion + "', '" + 
-                fechaNacimiento + "', '" + numeroTelefono + "', '" + 
-                puesto + "', '" + contrasenia + "', '" + usuario + "')";
-        
-        st.execute(result); //Se ejecuta la consulta.
-        metodos.cn.close(); //Cierra la coneccion con base de datos.     
-        JOptionPane.showMessageDialog(null, "Registro Guardado");
-        }
-        catch(SQLException e)
-        {
-        JOptionPane.showMessageDialog(null, "Error al llenar datos\n" + e);
         }
     }
     
