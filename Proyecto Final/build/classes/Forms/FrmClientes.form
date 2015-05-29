@@ -31,8 +31,8 @@
           <Component id="pnlSuperior" alignment="0" max="32767" attributes="0"/>
           <Component id="tabbedPaneHeader1" alignment="1" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-              <Component id="btnGuardar2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnGuardar1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -44,10 +44,10 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="pnlPrincipal" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="tabbedPaneHeader1" min="-2" pref="207" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnGuardar2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <Component id="tabbedPaneHeader1" min="-2" pref="218" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnGuardar1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -286,11 +286,6 @@
                       </Group>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnGuardar1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -316,8 +311,7 @@
                           <Component id="lblTelefonoRef1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtTelefonoRef1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnGuardar1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -353,14 +347,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtTelefonoRef1">
-            </Component>
-            <Component class="javax.swing.JButton" name="btnGuardar1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Guardar"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardar1ActionPerformed"/>
-              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -431,7 +417,7 @@
                           <Component id="lblTelefonoRef2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtTelefonoRef2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -443,6 +429,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtNombreRef2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreRef2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtApellidosRef2">
             </Component>
@@ -537,7 +526,7 @@
                           <Component id="lblTelefonoRef3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtTelefonoRef3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -578,12 +567,12 @@
         </Container>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnGuardar2">
+    <Component class="javax.swing.JButton" name="btnGuardar1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Guardar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardar2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardar1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

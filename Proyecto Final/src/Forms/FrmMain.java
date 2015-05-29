@@ -3,10 +3,6 @@ package Forms;
 
 import Logica.MetodosSQL;
 
-/**
- *
- * @author Edgar
- */
 public class FrmMain extends javax.swing.JFrame {
 
     FrmClientes frmClientes = new FrmClientes();
@@ -14,8 +10,9 @@ public class FrmMain extends javax.swing.JFrame {
     
     public FrmMain() {
         initComponents();
-        
-        comboBoxRound1.addItem("a");
+
+        comboBoxRound1.addItem("");
+        comboBoxRound1.addItem("");
     }
     
     

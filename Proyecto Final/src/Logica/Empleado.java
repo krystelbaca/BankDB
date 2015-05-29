@@ -31,7 +31,7 @@ public class Empleado extends Persona{
         contrasenia = Contrasenia;
         try {
             metodos.conectar();
-            String result = "SELECT * FROM EMPLEADOS WHERE usuario = '" + usuario + "' AND contrasenia = '" + contrasenia + "'";
+            String result = "SELECT * FROM EMPLEADOS WHERE usuario like '" + usuario + "' AND contrasenia = '" + contrasenia + "'";
             rs = st.executeQuery(result);
             if(rs.next() == true){
                 metodos.cn.close();

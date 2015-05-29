@@ -58,7 +58,6 @@ public class FrmClientes extends javax.swing.JFrame {
         txtDireccionRef1 = new javax.swing.JTextField();
         lblTelefonoRef1 = new javax.swing.JLabel();
         txtTelefonoRef1 = new javax.swing.JTextField();
-        btnGuardar1 = new javax.swing.JButton();
         pnlInferior2 = new javax.swing.JPanel();
         lblNombreRef2 = new javax.swing.JLabel();
         txtNombreRef2 = new javax.swing.JTextField();
@@ -77,7 +76,7 @@ public class FrmClientes extends javax.swing.JFrame {
         txtDireccionRef3 = new javax.swing.JTextField();
         lblTelefonoRef3 = new javax.swing.JLabel();
         txtTelefonoRef3 = new javax.swing.JTextField();
-        btnGuardar2 = new javax.swing.JButton();
+        btnGuardar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -219,13 +218,6 @@ public class FrmClientes extends javax.swing.JFrame {
 
         lblTelefonoRef1.setText("Telefono");
 
-        btnGuardar1.setText("Guardar");
-        btnGuardar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardar1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout pnlInferior1Layout = new javax.swing.GroupLayout(pnlInferior1);
         pnlInferior1.setLayout(pnlInferior1Layout);
         pnlInferior1Layout.setHorizontalGroup(
@@ -252,10 +244,6 @@ public class FrmClientes extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtNombreRef1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(37, 37, 37))
-            .addGroup(pnlInferior1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnGuardar1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlInferior1Layout.setVerticalGroup(
             pnlInferior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,13 +264,18 @@ public class FrmClientes extends javax.swing.JFrame {
                 .addGroup(pnlInferior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTelefonoRef1)
                     .addComponent(txtTelefonoRef1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnGuardar1))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         tabbedPaneHeader1.addTab("Referencia 1", pnlInferior1);
 
         lblNombreRef2.setText("Nombre");
+
+        txtNombreRef2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreRef2ActionPerformed(evt);
+            }
+        });
 
         lblApellidosRef2.setText("Apellidos");
 
@@ -342,7 +335,7 @@ public class FrmClientes extends javax.swing.JFrame {
                 .addGroup(pnlInferior2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTelefonoRef2)
                     .addComponent(txtTelefonoRef2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         tabbedPaneHeader1.addTab("Referencia 2", pnlInferior2);
@@ -407,15 +400,15 @@ public class FrmClientes extends javax.swing.JFrame {
                 .addGroup(pnlInferior3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTelefonoRef3)
                     .addComponent(txtTelefonoRef3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         tabbedPaneHeader1.addTab("Referencia 3", pnlInferior3);
 
-        btnGuardar2.setText("Guardar");
-        btnGuardar2.addActionListener(new java.awt.event.ActionListener() {
+        btnGuardar1.setText("Guardar");
+        btnGuardar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardar2ActionPerformed(evt);
+                btnGuardar1ActionPerformed(evt);
             }
         });
 
@@ -427,8 +420,8 @@ public class FrmClientes extends javax.swing.JFrame {
             .addComponent(pnlSuperior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(tabbedPaneHeader1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(btnGuardar2)
+                .addContainerGap()
+                .addComponent(btnGuardar1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -438,10 +431,10 @@ public class FrmClientes extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tabbedPaneHeader1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnGuardar2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(tabbedPaneHeader1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnGuardar1)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -459,25 +452,49 @@ public class FrmClientes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAnioActionPerformed
 
-    private void txtDireccionRef3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionRef3ActionPerformed
+    private void txtDireccionRef1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionRef1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDireccionRef3ActionPerformed
+    }//GEN-LAST:event_txtDireccionRef1ActionPerformed
 
-    private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnGuardar2ActionPerformed
+    private void btnGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar1ActionPerformed
+        Fecha = txtDia.getText() + "/" + txtMes.getText() + "/" + txtAnio.getText();//Concatenacion fecha
+
+            if((MetodosSQL.isFechaValida(Fecha)) == true) //Metodo para validar la fecha
+        {
+                if(cliente.altaClientes(txtNombre.getText(), txtApellidos.getText(),
+                   txtDireccion.getText(), Fecha, txtTelefono.getText()) == true)
+               {
+                    int idClie = 0;                                                                             //Obtencion del id_cliente
+                    try {
+                        idClie = (metodos.consultar("SELECT MAX(ID_Cliente) FROM Clientes")).getInt(1);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(FrmMain.class.getName()).log(Level.SEVERE, null, ex);
+                        
+                        
+                     }
+                    
+                    referencias.altaReferencias(txtNombreRef.getText(), txtApellidosRef1.getText(), txtDireccionRef.getText(), txtTelefonoRef.getText(), idClie);
+                    this.dispose();
+
+                 }
+                else
+                {
+
+                }
+        }
+    }//GEN-LAST:event_btnGuardar1ActionPerformed
 
     private void txtDireccionRef2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionRef2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDireccionRef2ActionPerformed
 
-    private void btnGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar1ActionPerformed
+    private void txtDireccionRef3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionRef3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnGuardar1ActionPerformed
+    }//GEN-LAST:event_txtDireccionRef3ActionPerformed
 
-    private void txtDireccionRef1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionRef1ActionPerformed
+    private void txtNombreRef2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreRef2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDireccionRef1ActionPerformed
+    }//GEN-LAST:event_txtNombreRef2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -521,7 +538,6 @@ public class FrmClientes extends javax.swing.JFrame {
     private org.edisoncor.gui.util.BrightPassFilter brightPassFilter1;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnGuardar1;
-    private javax.swing.JButton btnGuardar2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblAnio;
