@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
  *
  * @author Edgar
  */
+
 public class FrmLogin extends javax.swing.JFrame{
     
     Empleado empleado = new Empleado();
