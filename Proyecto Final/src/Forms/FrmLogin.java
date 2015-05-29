@@ -16,6 +16,7 @@ public class FrmLogin extends javax.swing.JFrame{
     public FrmLogin() {
         initComponents();
     }
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -85,6 +86,7 @@ public class FrmLogin extends javax.swing.JFrame{
        
        if(empleado.Ingresar(txtUsuario.getText(), pswContrasenia.getText()) == true){
            frmMain.setVisible(true);
+           this.dispose();
        } 
        else
        {

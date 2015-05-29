@@ -13,7 +13,7 @@ public class Cliente extends Persona{
     
     MetodosSQL metodos = new MetodosSQL();
     
-    public void altaClientes(String Nombre, String Apellidos,
+    public boolean altaClientes(String Nombre, String Apellidos,
             String Direccion, String FechaNacimiento, String NumeroTelefono)
     {
             nombre = Nombre;
@@ -37,6 +37,8 @@ public class Cliente extends Persona{
         catch(SQLException e)
         {
         JOptionPane.showMessageDialog(null, "Error al llenar datos\n" + e);
+        return false;
         }
+        return true;
     }
 }

@@ -1,10 +1,9 @@
 package Logica;
 
-import static Logica.MetodosSQL.cn;
+
 import static Logica.MetodosSQL.rs;
 import static Logica.MetodosSQL.st;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -34,14 +33,15 @@ public class Empleado extends Persona{
             metodos.conectar();
             String result = "SELECT * FROM EMPLEADOS WHERE usuario = '" + usuario + "' AND contrasenia = '" + contrasenia + "'";
             rs = st.executeQuery(result);
-            cn.close();
             if(rs.next() == true){
+                metodos.cn.close();
                 return true;
             }
             else
             {
                 return false;
             }
+            
         } catch (SQLException e) {
             return false;
         }

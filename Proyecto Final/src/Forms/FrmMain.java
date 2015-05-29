@@ -6,10 +6,6 @@
 package Forms;
 
 import Logica.MetodosSQL;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,8 +15,10 @@ public class FrmMain extends javax.swing.JFrame {
 
     FrmClientes frmClientes = new FrmClientes();
     MetodosSQL metodos = new MetodosSQL();
+    
     public FrmMain() {
         initComponents();
+
     }
 
     @SuppressWarnings("unchecked")
@@ -42,8 +40,9 @@ public class FrmMain extends javax.swing.JFrame {
         btnCargarEstado = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
+        lblUsuario = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("Apertura");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -155,16 +154,24 @@ public class FrmMain extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Estado de Cuenta", jPanel4);
 
+        lblUsuario.setText("Usuario");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblUsuario)
+                .addGap(89, 89, 89))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 52, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(lblUsuario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -187,15 +194,7 @@ public class FrmMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int id;
-        try {
-            id = metodos.consultarId("SELECT MAX(ID_EMPLEADO) FROM EMPLEADOS").getInt(1);
-        System.out.println(id);            
-        } catch (SQLException ex) {
-            Logger.getLogger(FrmMain.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        /*frmClientes.setVisible(true);*/
+        frmClientes.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnCargarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCargarEstadoActionPerformed
@@ -253,5 +252,6 @@ public class FrmMain extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lblUsuario;
     // End of variables declaration//GEN-END:variables
 }

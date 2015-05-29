@@ -5,8 +5,6 @@ import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -48,9 +46,11 @@ public class MetodosSQL{
     public ResultSet consultar(String resultset) {
         ResultSet resultado = null;
         try {
+            conectar();
             Statement sentencia;
             sentencia = cn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
             resultado = sentencia.executeQuery(resultset);
+            resultado.next();
             cn.commit();
         } catch (SQLException e) {
             return null;
@@ -58,22 +58,24 @@ public class MetodosSQL{
         return resultado;
     }
     
-    public ResultSet consultarId(String Result){
-        rs = null;
+    public int consultarId(String Sql){
+        int id = 0;
         try {
-            rs = st.executeQuery(Result);
-            int id = rs.getInt(1);
+            conectar();
+            st = cn.createStatement();
+            rs = st.executeQuery(Sql);
+            id = rs.getInt("ID_EMPLEADO");
             cn.commit();
-            cn.close();
                     } catch (SQLException ex) {
-            return null;
-        }        
-        return rs;
+                        System.out.println("Error");
+        }
+        return id;
     }
     
         public void mostrarTabla(JTable tabla, String Sql)
     {
     try {
+        conectar();
             //Para establecer el modelo al JTable
             DefaultTableModel modelo = new DefaultTableModel();
             tabla.setModel(modelo);

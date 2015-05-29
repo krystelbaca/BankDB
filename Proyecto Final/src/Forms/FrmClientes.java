@@ -4,6 +4,9 @@ package Forms;
 import Logica.Cliente;
 import Logica.MetodosSQL;
 import Logica.Referencias;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -293,16 +296,26 @@ public class FrmClientes extends javax.swing.JFrame {
         
         Fecha = txtDia.getText() + "/" + txtMes.getText() + "/" + txtAnio.getText();//Concatenacion fecha
         
-        if((metodos.isFechaValida(Fecha)) == true) //Metodo para validar la fecha
+            if((MetodosSQL.isFechaValida(Fecha)) == true) //Metodo para validar la fecha
         {
-        cliente.altaClientes(txtNombre.getText(), txtApellidos.getText(),
-                             txtDireccion.getText(), Fecha, txtTelefono.getText()); //Metodo para dar de alta empleados
-        referencias.altaReferencias(txtNombreRef.getText(), txtApellidosRef.getText(), txtDireccionRef.getText(), txtTelefonoRef.getText());
-        
-        
-        FrmReferencias frmReferencias = new FrmReferencias();
-        frmReferencias.setVisible(true);
-        this.dispose();
+                if(cliente.altaClientes(txtNombre.getText(), txtApellidos.getText(),
+                   txtDireccion.getText(), Fecha, txtTelefono.getText()) == true)
+                {
+                    int idClie = 0;
+                    try {
+                        idClie = (metodos.consultar("SELECT MAX(ID_Cliente) FROM Clientes")).getInt(1);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(FrmMain.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    System.out.println(idClie);
+
+                    referencias.altaReferencias(txtNombreRef.getText(), txtApellidosRef.getText(), txtDireccionRef.getText(), txtTelefonoRef.getText(), idClie);
+                    this.dispose();
+                }
+                else
+                {
+                    
+                }
         }
         
     }//GEN-LAST:event_btnGuardarActionPerformed
