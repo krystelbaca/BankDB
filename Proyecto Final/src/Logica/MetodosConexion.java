@@ -50,7 +50,7 @@ public class MetodosConexion{
             formatoFecha.setLenient(false);
             formatoFecha.parse(fecha);
         } catch (ParseException e) {
-            
+            return false;
         }
         return true;
     }

@@ -2,7 +2,7 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -23,61 +23,37 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="47" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="agregardEmpleadocmd" pref="139" max="32767" attributes="0"/>
-                  <Component id="buttonAction1" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="depositocmd" pref="151" max="32767" attributes="0"/>
-                  <Component id="buttonAction2" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+              <Component id="buttonAction1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+              <Component id="buttonAction2" min="-2" pref="183" max="-2" attributes="0"/>
+              <EmptySpace pref="41" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="depositocmd" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="agregardEmpleadocmd" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="buttonAction1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="buttonAction2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="111" max="32767" attributes="0"/>
+              <EmptySpace pref="203" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="org.edisoncor.gui.button.ButtonAction" name="depositocmd">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Dep&#xf3;sito"/>
-      </Properties>
-    </Component>
-    <Component class="org.edisoncor.gui.button.ButtonAction" name="agregardEmpleadocmd">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Agregar Empleado"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="agregardEmpleadocmdActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Retiro"/>
+        <Property name="text" type="java.lang.String" value="Cuenta Ahorro"/>
       </Properties>
     </Component>
     <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Consultas"/>
+        <Property name="text" type="java.lang.String" value="Cuenta Cr&#xe9;dito/Cheques"/>
       </Properties>
     </Component>
   </SubComponents>
