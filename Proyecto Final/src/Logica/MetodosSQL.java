@@ -21,7 +21,7 @@ public class MetodosSQL{
     try
     {
         String url = "jdbc:oracle:thin:@localhost:1521:XE";
-        cn = DriverManager.getConnection(url,"admin","wonder");
+        cn = DriverManager.getConnection(url,"banco","1234");
         st = cn.createStatement();
     }
     catch(SQLException e)

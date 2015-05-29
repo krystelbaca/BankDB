@@ -31,18 +31,22 @@ public class Empleado extends Persona{
         contrasenia = Contrasenia;
         try {
             metodos.conectar();
-            String result = "SELECT * FROM EMPLEADOS WHERE usuario = '" + usuario + "' AND contrasenia = '" + contrasenia + "'";
+            String result = "SELECT * FROM EMPLEADOS WHERE usuario like '" + usuario + "' AND contrasena like '" + contrasenia + "'";
+            System.out.println(result);
             rs = st.executeQuery(result);
-            if(rs.next() == true){
+            System.out.println("Entro en el catch");
+            if(rs.next()){
                 metodos.cn.close();
                 return true;
             }
             else
-            {
+            {   
+                System.out.println("pito");
                 return false;
             }
             
         } catch (SQLException e) {
+            System.out.println("MENSAJOTE DE ERROR BASE" +e);
             return false;
         }
     }

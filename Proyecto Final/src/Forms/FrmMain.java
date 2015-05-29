@@ -46,6 +46,8 @@ public class FrmMain extends javax.swing.JFrame {
         comboBoxRound1 = new org.edisoncor.gui.comboBox.ComboBoxRound();
         jPanel9 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
+        tabbedPaneHeader3 = new org.edisoncor.gui.tabbedPane.TabbedPaneHeader();
+        tabbedPaneClose1 = new org.edisoncor.gui.tabbedPane.TabbedPaneClose();
         jPanel7 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,7 +68,7 @@ public class FrmMain extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(147, 147, 147)
                 .addComponent(jButton5)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Cuentas", jPanel1);
@@ -230,15 +232,21 @@ public class FrmMain extends javax.swing.JFrame {
 
         tabbedPaneHeader1.addTab("Cuentas", jPanel5);
 
+        tabbedPaneHeader3.addTab("tab1", tabbedPaneClose1);
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 605, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(tabbedPaneHeader3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 517, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(tabbedPaneHeader3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 20, Short.MAX_VALUE))
         );
 
         tabbedPaneHeader1.addTab("Movimientos", jPanel6);
@@ -346,7 +354,9 @@ public class FrmMain extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblUsuario;
+    private org.edisoncor.gui.tabbedPane.TabbedPaneClose tabbedPaneClose1;
     private org.edisoncor.gui.tabbedPane.TabbedPaneHeader tabbedPaneHeader1;
     private org.edisoncor.gui.tabbedPane.TabbedPaneHeader tabbedPaneHeader2;
+    private org.edisoncor.gui.tabbedPane.TabbedPaneHeader tabbedPaneHeader3;
     // End of variables declaration//GEN-END:variables
 }
